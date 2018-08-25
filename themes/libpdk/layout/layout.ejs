@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- partial('_partial/head') %>
+</head>
+<body>
+<%
+let apilayouts = [
+    "cppapiindex",
+    "cppapimodules",
+    "cppapinamespaces",
+    "cppapiclasses",
+    "cppapiglobals",
+    "cppapifiles",
+    "cppapimodulecontent",
+    "cppapinamespacecontent",
+    "cppapifilecontent",
+    "cppapiclasscontent"
+];
+// 嵌入导航   
+let menuItems = site.data.category;
+let layout;
+if (page.layout) {
+    layout = page.layout;
+} else if (page.title) {
+    layout = "post";
+} else if (page._isBlogList) {
+    layout = "blog";
+}
+let apiCatalog = [];
+if (_.indexOf(apilayouts, layout) != -1) {
+    apiCatalog = get_site_data('cppapi/catalog');
+}
+%>
+<div class="uk-offcanvas-content">
+    <%- partial("_partial/header") %>
+    <%- body %>
+    <%- partial("_partial/footer") %>
+    <div id="offcanvas-push" uk-offcanvas="mode: slide; overlay: true">
+        <div class="uk-offcanvas-bar" id = "sidebar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <div class="menu-container">
+                <%- partial("_partial/inject_site_menu") %>
+                <%
+                if (layout == "document") {
+                    let catalog = get_document_catalog(page.category);
+                %>
+                <div class="uk-panel">
+                    <% for(var i = 0; i < catalog.length; i++) {
+                        let category = catalog[i];
+                    %>
+                    <ul class="uk-nav uk-nav-default tm-nav uk-margin-top">
+                        <li class="uk-nav-header"><%- category.text %></li>
+                        <%
+                        if (category.children && category.children.length != 0) {
+                        for(var j = 0; j < category.children.length; j++) {
+                            let item = category.children[j];
+                        %>
+                        <li><a href="<%- item.url %>"><%- item.text %></a></li>
+                        <%
+                        }
+                        }
+                        %>
+                    </ul>
+                    <%}%>
+                </div>
+                <%
+                } else if (page.maintype == "about") { %>
+                <ul class = "uk-text-left extra-items uk-width-1-1">
+                    <li class="uk-width-1-1"><a href = "/about/changelog.html"><%= __("about.menu_changelog") %></a></li>
+                    <li class="uk-width-1-1"><a href = "/about/becomesponsor.html"><%= __("about.menu_become_sponsor") %></a></li>
+                    <li class="uk-width-1-1"><a href = "/about/becomedeveloper.html"><%= __("about.menu_become_developer") %></a></li>
+                    <li class="uk-width-1-1"><a href = "/about/becomepartner.html"><%= __("about.menu_become_partner") %></a></li>
+                </ul>
+                <%} else if (_.indexOf(apilayouts, layout) != -1) {
+                %>
+                <ul class = "uk-text-left extra-items uk-width-1-1">
+                    <%
+                    for(let key in apiCatalog) {
+                        let catalogItem = apiCatalog[key];
+                    %>
+                    <li class="uk-width-1-1">
+                        <img src="/statics/images/apidocs/cpp/<%- catalogItem.icon %>" style="height: 20px;width: 20px;padding-right: 5px"/>
+                        <a href = "<%- catalogItem.url %>"><%- catalogItem.name %></a>
+                    </li>
+                    <% } %>
+                </ul>
+                <% }%>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

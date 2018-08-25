@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+!node_modules/hexo-generator-cpp-apidoc/
+!node_modules/hexo-generator-php-apidoc/
+public/
+.deploy*/
+.idea/
+cache/
+themes/landscape/
+hexo-generator-apidoc/
+temp/

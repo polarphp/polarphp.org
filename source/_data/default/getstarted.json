@@ -1,0 +1,15 @@
+[{
+  "text": "Install",
+  "key": "install",
+  "children": [{
+    "text": "Environment require",
+    "key": "environment-require"
+  }]
+}, {
+  "text": "Demo",
+  "key": "demo",
+  "children": [{
+    "text": "Hello world",
+    "key": "hello-world"
+  }]
+}]

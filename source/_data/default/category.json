@@ -1,0 +1,26 @@
+{
+  "home": {
+    "name": "首页",
+    "url": "/"
+  },
+  "get_start": {
+    "name": "快速入门",
+    "url": "/get_started/index.html"
+  },
+  "manual": {
+    "name": "手册",
+    "url": "/manual/index.html"
+  },
+  "blog": {
+    "name": "博客",
+    "url": "/blog/index.html"
+  },
+  "team":{
+    "name": "团队介绍",
+    "url": "/team.html"
+  },
+  "about":{
+    "name": "关于",
+    "url": "/about/index.html"
+  }
+}

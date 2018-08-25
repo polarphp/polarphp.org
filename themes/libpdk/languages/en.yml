@@ -1,0 +1,149 @@
+common:
+  readmore: "read more"
+  empty_data: "oops, no data"
+index:
+  page_title: "polarphp - The runtime container of PHP programming language"
+  slogan: "The php language Implemented with c++17"
+  get_started: "Get Started"
+  gitee_repo: "Gitee Repo"
+  github_repo: "Github Repo"
+  features: "Features"
+  feature_oop: "OOP design like JDK"
+  feature_oop_desc: "We develop polarphp with object oriented programming style, reorganize PHP functions, interface and classes like Java JDK style. To provide developer with a well designed and robust programming interface."
+  feature_thread: "Thread safe support"
+  feature_thread_desc: "Care about multithread environment, almost all of API are thread safe implementation. You can develop multithread application happily with polarphp, use operation system thread mechanism to improve application performance."
+  feature_performance: "High performance"
+  feature_performance_desc: "polarphp develop with modern C++ language and deliver to PHP developer as PHP native extension. We borrow many function and class implemention from JDK, C++ standard library and PHP kernel source code. We implment polarphp as fast as we can."
+  feature_doc: "Complete documentation"
+  feature_doc_desc: "A good opensource project must be well documented, polarphp supply a complete programming manuals and application programming interface documentations online. You can learn polarphp easily by manuals and get API detail usage in API documentations."
+  feature_cpp11: "Implement with C++11"
+  feature_cpp11_desc: "polarphp itself is big project develop with C++, We use modern C++ standard when coding and very care about the project architecture, code readability and maintainability. Provide application developer with a reliable framework codebase."
+  fearure_opensource: "Opensource project"
+  feature_opensource_desc: "polarphp is an opensource project adopt the Apache Licence 2.0 licence and code managed with Github platform, You can develope application with polarphp carefree, Just enjoy it!"
+  tutorials: "Tutorials"
+  latest_posts: "Latest Posts"
+  empty_list: "oops, empty"
+  sponsor_title: "Sponsor"
+  become_sponsor: "How to become sponsor"
+  developer_title: "Developer"
+  become_developer: "How to become developer"
+  partner_title: "Partner"
+  become_partner: "How to become partner"
+  links_title: "Friend Links"
+manual:
+  page_title_suffix: " - polarphp develop manual"
+team:
+  page_title: "Meet the developer guys of polarphp project"
+  nomember: "oops, current no developer from the community, very welcome to join us."
+  meet_team: "Meet the Team"
+  contribute_types: "We need these types of contributors:"
+  cpp_developer: "Core CPP developer"
+  manual_writter: "get started and manual writer"
+  website_maintainer: "Official website maintainer"
+  demo_application_developer: "Demo application developer"
+  community_sermon: "Community sermon for polarphp"
+  interesting_desc: "If you are interested in any kind of work in the list above, please contact me:"
+  core_team_title: "The Core Team"
+  core_team_desc: "The development of polarphp and its ecosystem is guided by an international team, some of whom have chosen to be featured below."
+  community_team_title: "The Community Contributors"
+  community_team_desc: "Some members of the polarphp community have so enriched it, that they deserve special mention. We've developed a more intimate relationship with these key partners, often coordinating with them on upcoming features and news."
+blog:
+  page_title: "Welcome visit develop blog of polarphp project"
+post:
+  page_title_suffix: "polarphp develop blog"
+about:
+  page_title: "Detail infomation about polarphp project and qcoreteam organization"
+  page_changelog_title: "Changelog about polarphp project"
+  page_become_sponsor_title: "Help us to become a sponsor of polarphp project"
+  page_become_developer_title: "Come with us let the polarphp project better"
+  page_become_partner_title: "Become a partner and let more people know about polarphp project"
+  menu_become_sponsor: "Become sponsor"
+  menu_become_developer: "Become developer"
+  menu_become_partner: "Become partner"
+  menu_changelog: "Changelog"
+  menu_aboutus: "About us"
+cppapidoc:
+  common:
+    define_location: "defined at line <span class='uk-text-success'>%s</span> of file <span class='uk-text-success'>%s</span>"
+  index:
+    page_title: "Welcome to visit polarphp C++ API documentation page"
+    module_list: "Module List"
+    namespace_list: "Namespace List"
+  globals:
+    page_title: "The global definitions of polarphp framework"
+    global_classes: "Global Classes"
+    global_structs: "Global Structs"
+    global_macros: "Global Macros"
+    global_enums: "Global Enums"
+    global_functions: "Global Functions"
+    global_const_and_var: "Global Constants & Variables"
+  namespaces:
+    page_title: "The namespaces catalog of polarphp framework"
+    namespace_list: "Namespace List"
+  modules:
+    page_title: "The modules catalog of polarphp framework"
+    module_list: "Module List"
+  files:
+    page_title: "The all header files of polarphp framework"
+    file_list: "File List"
+  class_content:
+    page_title: "Class %s detail description page"
+    public_types: "Public Types"
+    public_methods: "Public Methods"
+    public_static_methods: "Public Static Methods"
+    public_properties: "Public Properties"
+    public_static_properties: "Public Static Properties"
+    protected_types: "Protected Types"
+    protected_methods: "Protected Methods"
+    protected_statics_methods: "Protected Static Methods"
+    protected_properties: "Protected Properties"
+    protected_statics_properties: "Protected Static Properties"
+    detail_description: "Detail Description"
+    constructor_and_destructor: "Constructors & Destructor"
+  namespace_content:
+    page_title: "Namespace %s detail description page"
+  module_content:
+    page_title: "Module %s detail description page"
+  file_content:
+    page_title: "File %s detail description page"
+  partial_variable_section:
+    variable_define: "Variable Defines"
+  partial_class_section:
+    classes: "Classes"
+  enum_section:
+    enum_types: "Enum Types"
+  enum_info_section:
+    title: "Enum Detail Descriptions"
+    field_name: "Field Name"
+    field_desc: "Field Description"
+  macro_section:
+    macros: "Macro Defines"
+  macro_info_section:
+    title: "Macro Detail Descriptions"
+  module_section:
+    submodule: "Sub Modules"
+  namespace_section:
+    namespace: "Namespaces"
+  typedef_section:
+    typedef_define: "Typedef Types"
+  typedef_info_section:
+    title: "Typedef Detail Descriptions"
+  function_section:
+    function_list: "Functions"
+  function_info_section:
+    title: "Function Detail Descriptions"
+  variable_info_section:
+    title: "Variable Detail Descriptions"
+  class:
+    base_class_section:
+      parent_classes: "Parent Classes"
+    friend_section:
+      friend_list: "Friend List"
+    friend_info_section:
+      title: "Friend Detail Descriptions"
+    method_section:
+      view_inherit_methods: "view methods from %s"
+    attribute_section:
+      view_inherit_properties: "view properties from %s"
+    type_section:
+      view_inherit_types: "view types from %s"

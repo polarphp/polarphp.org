@@ -1,0 +1,27 @@
+{
+  "cppapiindex" : {
+    "name": "Summary",
+    "url": "index.html",
+    "icon": "home.svg"
+  },
+  "cppapimodules" : {
+    "name": "Modules",
+    "url": "modules.html",
+    "icon": "module.svg"
+  },
+  "cppapinamespaces" : {
+    "name": "Namespace",
+    "url": "namespaces.html",
+    "icon": "namespace.svg"
+  },
+  "cppapiglobals" : {
+    "name": "Globals",
+    "url": "globals.html",
+    "icon": "global.svg"
+  },
+  "cppapifiles" : {
+    "name": "All Files",
+    "url": "files.html",
+    "icon": "files.svg"
+  }
+}
