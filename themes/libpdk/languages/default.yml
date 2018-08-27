@@ -27,8 +27,8 @@ index:
   become_sponsor: "如何赞助"
   developer_title: "开发者"
   become_developer: "如何参与开发"
-  partner_title: "合作媒体"
-  become_partner: "成为合作媒体"
+  partner_title: "合作伙伴"
+  become_partner: "成为合作伙伴"
   links_title: "友情链接"
 manual:
   page_title_suffix: " - polarphp develop manual"
@@ -59,6 +59,6 @@ about:
   page_become_partner_title: "Become a partner and let more people know about polarphp project"
   menu_become_sponsor: "赞助"
   menu_become_developer: "参与开发"
-  menu_become_partner: "成为合作媒体"
+  menu_become_partner: "成为合作伙伴"
   menu_changelog: "更新记录"
   menu_aboutus: "关于我们"
