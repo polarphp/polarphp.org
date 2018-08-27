@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'Gotham Rounded';
   src: url('../fonts/GothamRoundedBook.otf') format('truetype');
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 body {
@@ -11,6 +11,7 @@ body {
   height:100%;
   -webkit-tap-highlight-color:rgba(0,0,0,0)!important;
   font-family: $global-font-family!important;
+  font-weight: 300;
 }
 
 .clear {
