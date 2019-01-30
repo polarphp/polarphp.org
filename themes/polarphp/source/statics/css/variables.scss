@@ -1,0 +1,13 @@
+@charset "utf-8";
+$polarphp-base-color: #d71718;
+$polarphp-light-base-color: #8794BC;
+$polarphp-link-color: #369;
+$polarphp-link-hover-color: #AE508D;
+$polarphp-border-color: #e5e5e5;
+$polarphp-normal-font-color: #696969;
+$polarphp-std-fontsize: 12px;
+$polarphp-page-max-width : 1200px;
+
+/** 修改默认的uikit变量 */
+$navbar-nav-item-height: 50px !default;
+$global-font-family:  'Gotham Rounded', "微软雅黑", -apple-system, BlinkMacSystemFont,"宋体" ,"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

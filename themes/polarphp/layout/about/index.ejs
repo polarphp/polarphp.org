@@ -1,0 +1,44 @@
+<div id="container" style="width: 100%;">
+    <div class="uk-container uk-margin-small-top uk-margin-small-bottom about-page-container">
+        <%- partial("_partial/sitepath", { pathList: [get_site_menu_by_key("home"), get_site_menu_by_key("about")]}) %>
+        <div class="about-container">
+            <div class="uk-visible@s">
+                <ul class="uk-flex-left about-nav" data-uk-tab>
+                    <li class="uk-active"><a href="/about"><%= __("about.menu_aboutus") %></a></li>
+                    <li><a href="/about/changelog.html"><%= __("about.menu_changelog") %></a></li>
+                    <li><a href="/about/becomesponsor.html"><%= __("about.menu_become_sponsor") %></a></li>
+                    <li><a href="/about/becomedeveloper.html"><%= __("about.menu_become_developer") %></a></li>
+                    <li><a href="/about/becomepartner.html"><%= __("about.menu_become_partner") %></a></li>
+                </ul>
+            </div>
+            <div class="about-info-item">
+                <div class="uk-text-center logo"><img src="/statics/images/about/qcoreteam.svg"/></div>
+                <div class="text uk-margin-medium-top">
+                    qcoreteam is an opensource organization set up by a group of youth programmer in October 1,2017 at Beijing city, the capital of China. The all member of qcoreteam take part in development after work. We hope qcoreteam become an excellent opensource orgnization all around the world in PHP field. 
+                    <br/>
+                    <span class="uk-label uk-label-success">official github repo</span>
+                    <a href="https://www.github.com/qcoreteam">qcoreteam repository</a>
+                </div>
+                <hr class="uk-divider-icon"/>
+                <div class="uk-text-center uk-margin-large-top polarphp-logo"><img src="/statics/images/polarphp-red.svg" style="height: 60px;"/></div>
+                <div class="text uk-margin-medium-top">
+                    Polarlang is the runtime container of PHP programming language.
+                    <br/>
+                    <div>
+                        <span class="uk-label uk-label-success uk-text-center" style="width:80px;">github repo</span>
+                        <a href="https://github.com/polarphp/polarphp">polarphp github repository</a>
+                    </div>
+                    <div>
+                        <span class="uk-label uk-label-success uk-text-center" style="width:80px;">gitee repo</span>
+                        <a href="https://gitee.com/polarphp/polarphp">polarphp gitee reposistory</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+   $(".about-container .about-nav a").click(function(){
+      window.location.assign($(this).attr("href"));
+   });
+</script>

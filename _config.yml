@@ -80,7 +80,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: libpdk
+theme: polarphp
 project_version: 0.0.1
 #libpdk_ide_helper_repo: "https://github.com/libpdk/ide-auto-complete.git"
 
