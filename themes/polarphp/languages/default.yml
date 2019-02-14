@@ -3,7 +3,7 @@ common:
   empty_data: "没有更多数据了"
 index:
   page_title: "polarphp - The runtime container of PHP programming language"
-  slogan: "The runtime container of PHP programming language"
+  slogan: "全新的 PHP 语言的运行时容器"
   get_started: "快速入门"
   gitee_repo: "Gitee仓库"
   github_repo: "Github仓库"
@@ -49,6 +49,7 @@ team:
   community_team_desc: "Some members of the polarphp community have so enriched it, that they deserve special mention. We've developed a more intimate relationship with these key partners, often coordinating with them on upcoming features and news."
 blog:
   page_title: "Welcome visit develop blog of polarphp project"
+  site_navbar_leaf: "文章正文"
 post:
   page_title_suffix: "polarphp develop blog"
 about:

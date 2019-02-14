@@ -88,5 +88,5 @@ project_version: 0.0.1
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   - type: git
-    repo: git@gitee.com:polarphp/polarphp_website_deploy.git
+    repo: gitee:polarphp/polarphp_website_deploy.git
     branch: master

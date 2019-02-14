@@ -234,10 +234,14 @@ li {
     height: 60px;
     line-height: 60px;
   }
+
   background: $polarphp-base-color;
 
   .uk-navbar {
-    height: 63px;
+    height: 40px;
+    @media (min-width: 640px) {
+      height: 63px;
+    }
   }
 
   .uk-navbar-container
@@ -286,6 +290,26 @@ li {
   }
 
   .uk-navbar-dropdown {
+    a {
+      color: #2b303b;
+      text-decoration: none;
+      -webkit-transition: 0.1s ease-in-out;
+      transition: 0.1s ease-in-out;
+      -webkit-transition-property: color;
+      transition-property: color;
+    }
+
+    a:hover {
+      color: $polarphp-base-color;
+      text-decoration: none;
+      -webkit-transition: 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
+      -webkit-transition-property: color;
+      transition-property: color;
+    }
+  }
+
+  .uk-navbar-dropdown {
     padding: 0;
   }
   .nav-menu {
@@ -301,8 +325,10 @@ li {
 .logo {
   img {
     height: 20px;
+    margin-top: 3px;
     @media (min-width: 640px) {
       height: 30px;
+      margin-top: 0px;
     }
   }
 }
@@ -351,5 +377,11 @@ li {
     line-height: 60px;
     margin-right: 5px;
     margin-top: -4px;
+  }
+  .uk-breadcrumb>:nth-child(n+2):not(.uk-first-column)::before {
+    content: "/";
+    display: inline-block;
+    margin: 0 10px;
+    color: #999;
   }
 }

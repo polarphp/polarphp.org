@@ -69,6 +69,16 @@ body {
     @media (min-width: 640px) {
       font-size: 2.5em;
     }
+    a {
+      color:#666666;
+      &:hover {
+        color: $polarphp-base-color;
+        -webkit-transition: 0.1s ease-in-out;
+        transition: 0.1s ease-in-out;
+        -webkit-transition-property: color;
+        transition-property:color;
+      }
+    }
   }
   .meta {
     font-size: 11px;

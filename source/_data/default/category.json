@@ -4,12 +4,21 @@
     "url": "/"
   },
   "get_start": {
-    "name": "快速入门",
-    "url": "/get_started/index.html"
-  },
-  "manual": {
-    "name": "手册",
-    "url": "/manual/index.html"
+    "name": "文档",
+    "url": "/get_started/index.html",
+    "children": [{
+      "name": "快速入门",
+      "url": "/get_started/index.html"
+    },{
+      "name": "参考手册",
+      "url": "/manual/index.html"
+    },{
+      "name": "标准库 API 文档",
+      "url": "/get_started/index.html"
+    },{
+      "name": "语言参考规范",
+      "url": "/get_started/index.html"
+    }]
   },
   "blog": {
     "name": "博客",
