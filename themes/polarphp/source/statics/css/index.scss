@@ -241,12 +241,12 @@
 }
 
 /**
- * teamwork region style
+ * communitywork region style
  */
-.teamwork-panel {
+.communitywork-panel {
   min-height:250px;
   max-width: $polarphp-page-max-width;
-  .teamwork-title {
+  .communitywork-title {
     img {
       height:50px;
       width: 50px;
@@ -335,8 +335,12 @@
   }
   .partner-logo {
     img {
-      height: 60px;
-      max-height: 60px;
+      height: 40px;
+      max-height: 40px;
+      @media (min-width: 640px) {
+        height: 50px;
+        max-height: 50px;
+      }
     }
     margin-bottom: 10px;
     @media (min-width: 640px) {

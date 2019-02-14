@@ -71,7 +71,7 @@ Improvements:
 
 - *Rust* got updated with new keywords by [Kasper Andersen][] and then
   significantly modernized even more by [Eduard-Mihai Burtescu][] (yes, @eddyb,
-  Rust core team member!)
+  Rust core community member!)
 - *Python* updated with f-literals by [Philipp A][].
 - *YAML* updated with unquoted strings support.
 - *Gauss* updated with new keywords by [Matt Evans][].
@@ -479,7 +479,7 @@ New languages:
 - *Elm* by [Janis Voigtländer][]
 - *XQuery* by [Dirk Kirsten][]
 - *Mojolicious* by [Dotan Dimet][]
-- *AutoIt* by Manh Tuan from [J2TeaM][]
+- *AutoIt* by Manh Tuan from [J2community][]
 - *Toml* (ini extension) by [Guillaume Gomez][]
 
 New styles:
@@ -510,7 +510,7 @@ Notable fixes and improvements to existing languages:
 [Vadimtro]: https://github.com/Vadimtro
 [Benjamin Auder]: https://github.com/ghost
 [Dotan Dimet]: https://github.com/dotandimet
-[J2TeaM]: https://github.com/J2TeaM
+[J2community]: https://github.com/J2community
 
 
 ## Version 8.6
@@ -955,7 +955,7 @@ The latest long period of almost complete inactivity in the project coincided
 with growing interest to it led to a decision that now seems completely obvious:
 we need more core developers.
 
-So without further ado let me welcome to the core team two long-time
+So without further ado let me welcome to the core community two long-time
 contributors: [Jeremy Hull][] and [Oleg
 Efimov][].
 

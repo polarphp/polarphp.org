@@ -4,7 +4,7 @@ common:
 index:
   page_title: "polarphp - The runtime container of PHP programming language"
   slogan: "全新的 PHP 语言的运行时容器"
-  get_started: "快速入门"
+  get_started: "开始学习"
   gitee_repo: "Gitee仓库"
   github_repo: "Github仓库"
   features: "特性"
@@ -32,10 +32,10 @@ index:
   links_title: "友情链接"
 manual:
   page_title_suffix: " - polarphp develop manual"
-team:
+community:
   page_title: "Meet the developer guys of polarphp project"
   nomember: "oops, current no developer from the community, very welcome to join us."
-  meet_team: "Meet the Team"
+  meet_community: "Meet the community"
   contribute_types: "We need these types of contributors:"
   cpp_developer: "Core CPP developer"
   manual_writter: "get started and manual writer"
@@ -43,10 +43,10 @@ team:
   demo_application_developer: "Demo application developer"
   community_sermon: "Community sermon for polarphp"
   interesting_desc: "If you are interested in any kind of work in the list above, please contact me:"
-  core_team_title: "The Core Team"
-  core_team_desc: "The development of polarphp and its ecosystem is guided by an international team, some of whom have chosen to be featured below."
-  community_team_title: "The Community Contributors"
-  community_team_desc: "Some members of the polarphp community have so enriched it, that they deserve special mention. We've developed a more intimate relationship with these key partners, often coordinating with them on upcoming features and news."
+  core_community_title: "The Core community"
+  core_community_desc: "The development of polarphp and its ecosystem is guided by an international community, some of whom have chosen to be featured below."
+  community_community_title: "The Community Contributors"
+  community_community_desc: "Some members of the polarphp community have so enriched it, that they deserve special mention. We've developed a more intimate relationship with these key partners, often coordinating with them on upcoming features and news."
 blog:
   page_title: "Welcome visit develop blog of polarphp project"
   site_navbar_leaf: "文章正文"

@@ -4,7 +4,7 @@ $polarphp-about-page-width: 960px;
 body {
   background-color: #FAFAFA!important;
 }
-.team-page-container
+.community-page-container
 {
   max-width: $polarphp-about-page-width;
   padding: 0!important;
@@ -17,7 +17,7 @@ body {
   margin-top: 20px!important;
 }
 
-.team-container {
+.community-container {
   min-height: 500px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -32,13 +32,13 @@ body {
   .uk-heading-line {
     font-family: $global-font-family;
   }
-  .team-section-wrapper {
+  .community-section-wrapper {
     p.desc {
       @media (min-width: 640px) {
         padding-bottom: 30px;
       }
     }
-    .team-section-item {
+    .community-section-item {
       font-size: 0.9em;
       .avatar {
         display: block;
@@ -106,7 +106,7 @@ body {
       margin-bottom: 60px;
     }
   }
-  .team-member-item {
+  .community-member-item {
     .nomember {
     }
   }

@@ -1,0 +1,72 @@
+<div id="container" style="width: 100%;">
+    <div class="uk-container uk-margin-small-top uk-margin-small-bottom community-page-container">
+        <%- partial("_partial/sitepath", { pathList: [
+            get_site_menu_by_key("home"),
+            get_site_menu_by_key("community")
+        ]}) %>
+        <div class="community-container">
+            <h1 class="uk-heading-line">
+                <%= __("community.meet_community") %>
+            </h1>
+            <div class="welcome-contributor">
+                <span><%= __("community.contribute_types") %></span>
+                <ul>
+                    <li><%= __("community.cpp_developer") %></li>
+                    <li><%= __("community.manual_writter") %></li>
+                    <li><%= __("community.website_maintainer") %></li>
+                    <li><%= __("community.demo_application_developer") %></li>
+                    <li><%= __("community.community_sermon") %></li>
+                </ul>
+                <p><%= __("community.interesting_desc") %></p>
+                <div class="info-item">
+                    <img src="/statics/images/community/email.svg">
+                    <span>zzusoftboy@gmail.com</span>
+                    <div style="clear: both"></div>
+                </div>
+            </div>
+            <section class="community-section-wrapper">
+                <h2 class="uk-heading-line"><%= __("community.core_community_title") %></h2>
+                <p class="desc"><%= __("community.core_community_desc") %></p>
+                <div class="community-section-item uk-text-middle uk-grid-small" uk-grid>
+                    <div class="uk-width-1-1 uk-width-auto@s">
+                        <img src="/statics/images/community/developers/zzu_softboy.jpeg" class="avatar"/>
+                    </div>
+                    <div class="uk-width-1-1 uk-width-expand@s info ">
+                        <div class="info-item">ZZU_SOFTBOY</div>
+                        <div class="info-item">CORE FOCUS: polarphp</div>
+                        <div class="info-item">
+                            <img src="/statics/images/community/job.svg" class="info-icon"/>
+                            Creator@polarphp
+                        </div>
+                        <div class="info-item">
+                            <img src="/statics/images/community/address.svg" class="info-icon"/>
+                            <span>Beijing City, China</span>
+                        </div>
+                        <div class="info-item">
+                            <img src="/statics/images/community/global.svg" class="info-icon"/>
+                            <span>中文/English</span>
+                        </div>
+                        <div class="info-item">
+                            <img src="/statics/images/community/link.svg" class="info-icon"/>
+                            <a href="https://www.patreon.com/zzusoftboy">patreon.com/zzusoftboy</a>
+                        </div>
+                        <div class="info-item">
+                            <a href="https://github.com/polarphp/polarphp" target="_blank"><img src="/statics/images/community/github.svg" class="social-media-icon"/></a>
+                            <a href="https://www.facebook.com/zzusoftboy" target="_blank"><img src="/statics/images/community/facebook.svg" class="social-media-icon"/></a>
+                            <a href="https://www.twitter.com/zzusoftboy" target="_blank"><img src="/statics/images/community/twitter.svg" class="social-media-icon"/></a>
+                        </div>
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+            </section>
+            <hr class="uk-divider-icon">
+            <section class="community-section-wrapper">
+                <h2 class="uk-heading-line"><%= __("community.community_community_title") %></h2>
+                <p class="desc"><%= __("community.community_community_desc") %></p>
+                <div class="community-member-item">
+                    <p class="nomember"><%= __("community.nomember") %></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

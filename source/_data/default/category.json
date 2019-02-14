@@ -7,9 +7,6 @@
     "name": "文档",
     "url": "/get_started/index.html",
     "children": [{
-      "name": "快速入门",
-      "url": "/get_started/index.html"
-    },{
       "name": "参考手册",
       "url": "/manual/index.html"
     },{
@@ -24,9 +21,9 @@
     "name": "博客",
     "url": "/blog/index.html"
   },
-  "team":{
-    "name": "团队介绍",
-    "url": "/team.html"
+  "community":{
+    "name": "社区",
+    "url": "/community.html"
   },
   "about":{
     "name": "关于",
