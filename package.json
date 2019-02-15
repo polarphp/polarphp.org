@@ -5,8 +5,15 @@
   "hexo": {
     "version": "3.8.0"
   },
+  "scripts": {
+    "start": "hexo server",
+    "build": "hexo generate && gulp",
+    "eslint": "eslint .",
+    "deploy": "hexo deploy"
+  },
   "dependencies": {
     "hexo": "3.8.0",
+    "hexo-all-minifier": "^0.5.3",
     "hexo-deployer-git": "^1.0.0",
     "hexo-excerpt": "^1.1.4",
     "hexo-filter-highlight": "0.0.3",
@@ -21,6 +28,8 @@
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3",
     "hexo-toc": "^1.1.0",
+    "file-loader": "^0.11.2",
+    "image-webpack-loader": "^3.4.2",
     "mkdir-recursive": "^0.4.0",
     "ncp": "^2.0.0"
   },
