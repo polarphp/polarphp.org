@@ -10,5 +10,5 @@ public/
 .idea/
 cache/
 themes/landscape/
-hexo-generator-apidoc/
 temp/
+pdk-ide-auto-complete/
