@@ -1,9 +1,9 @@
-[submodule "tools/apigen"]
-	path = tools/apigen
-	url = polarphp:/polarphp/ApiGen.git
-[submodule "node_modules/hexo-generator-cpp-apidoc"]
-	path = node_modules/hexo-generator-cpp-apidoc
-	url = polarphp:/polarphp/hexo-generator-cpp-apidoc.git
 [submodule "node_modules/hexo-generator-php-apidoc"]
 	path = node_modules/hexo-generator-php-apidoc
-	url = polarphp:/polarphp/hexo-generator-cpp-apidoc.git
+	url = polarphp:polarphp/hexo-generator-php-apidoc
+[submodule "node_modules/hexo-generator-cpp-apidoc"]
+	path = node_modules/hexo-generator-cpp-apidoc
+	url = polarphp:polarphp/hexo-generator-cpp-apidoc
+[submodule "pdk-ide-auto-complete"]
+	path = pdk-ide-auto-complete
+	url = polarphp:polarphp/pdk-ide-auto-complete.git
