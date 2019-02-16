@@ -185,8 +185,7 @@ a:hover {
   }
 }
 
-.toc
-{
+.toc {
   border-bottom: 1px solid #e5e5e5;
   ul {
     padding-left: 20px;
@@ -226,8 +225,7 @@ li {
 /**
  * site header style
  */
-.site-header
-{
+.site-header {
   height: 40px;
   line-height: 40px;
   @media (min-width: 640px) {
@@ -236,7 +234,6 @@ li {
   }
 
   background: $polarphp-base-color;
-
   .uk-navbar {
     height: 40px;
     @media (min-width: 640px) {
@@ -254,8 +251,12 @@ li {
     padding-left: 5px!important;
     padding-right: 5px!important;
     word-spacing: 20px!important;
-    line-height: 63px!important;
-    height: 63px!important;
+    line-height: 40px!important;
+    height: 40px!important;
+    @media (min-width: 640px) {
+      line-height: 63px!important;
+      height: 63px!important;
+    }
   }
 
   .dropdown-menu-item {
@@ -320,8 +321,8 @@ li {
       color: #ffffff!important;
     }
   }
-
 }
+
 .logo {
   img {
     height: 20px;
@@ -332,13 +333,13 @@ li {
     }
   }
 }
-.logo-img
-{
+
+.logo-img {
   color: #ffffff;
   font-size: 2.0em;
 }
-.logo-img:hover
-{
+
+.logo-img:hover {
   color: #ffffff;
 }
 
