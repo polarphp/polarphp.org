@@ -11,3 +11,5 @@ public/
 cache/
 themes/landscape/
 temp/
+hexo-generator-php-apidoc
+hexo-generator-cpp-apidoc
