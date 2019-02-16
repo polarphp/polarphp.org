@@ -1,5 +1,5 @@
 <%
-function zapi_atricle_render_link(info)
+function polarphp_atricle_render_link(info)
 {
     return '<a href="'+info.url+'">'+info.title+'</a>';
 }
@@ -21,6 +21,7 @@ let content = page.content.replace(/<a\s*?href\s*=\s*['"]([^'"]+)['"]\s*?class\s
 let date = page.date.format("YYYY/MM/DD HH:mm:ss");
 let title = page.title;
 %>
+
 <div id="container" style="width: 100%">
     <div class="uk-container uk-margin-small-top uk-margin-small-bottom article-page-container">
         <%- partial("_partial/sitepath", { pathList: [
@@ -41,12 +42,12 @@ let title = page.title;
                 <% if(prev) { %>
                 <div class="uk-width-1-1@s uk-width-1-2@m uk-flex uk-flex-left nav-item">
                     <span data-uk-icon="icon: chevron-left"></span>
-                    <div class="uk-text-break uk-text-left"><%- zapi_atricle_render_link(prev) %></div>
+                    <div class="uk-text-break uk-text-left"><%- polarphp_atricle_render_link(prev) %></div>
                 </div>
                 <% } %>
                 <% if (next) {%>
                 <div class="uk-width-1-1@s uk-width-1-2@m uk-width-1-2@m uk-flex uk-flex-right nav-item nav-item-right">
-                    <div class="uk-text-break uk-text-right"><%- zapi_atricle_render_link(next) %></div>
+                    <div class="uk-text-break uk-text-right"><%- polarphp_atricle_render_link(next) %></div>
                     <span data-uk-icon="icon: chevron-right"></span>
                 </div>
                 <% } %>
@@ -54,6 +55,7 @@ let title = page.title;
         </div>
     </div>
 </div>
+
 <script>
    $(function ()
    {

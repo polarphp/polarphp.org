@@ -82,8 +82,7 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: polarphp
 project_version: 0.0.1
-all_minifier: true
-#libpdk_ide_helper_repo: "https://github.com/libpdk/ide-auto-complete.git"
+#polarphp_ide_helper_repo: "https://github.com/polarphp/ide-auto-complete.git"
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
