@@ -14,7 +14,7 @@
       "url": "/apidocs/libpdk/index.html"
     },{
       "name": "语言参考规范",
-      "url": "/get_started/index.html"
+      "url": "/langref/index.html"
     }]
   },
   "blog": {
@@ -26,7 +26,7 @@
     "url": "/community.html"
   },
   "about":{
-    "name": "关于",
+    "name": "关于我们",
     "url": "/about/index.html"
   }
 }

@@ -17,7 +17,7 @@ if (layout == "post") {
     title = page.title + __("post.page_title_suffix");
     cssfilename = "article.css";
 } else if (layout == "document") {
-    title = page.title + __("about.page_title_suffix");
+    title = page.title;
     cssfilename = "document.css";
 } else if (page.maintype == "about") {
     if (layout == "about/index") {

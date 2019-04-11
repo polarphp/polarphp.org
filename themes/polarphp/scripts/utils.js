@@ -41,9 +41,10 @@ hexo.extend.helper.register('get_document_catalog', function(){
    } else if (page.path.startsWith("get_started")){
      catalog = clone(get_site_data.call(this, "getstarted"));
      baseUrl = "get_started"
+   } else if (page.path.startsWith("langref")) {
+      catalog = clone(get_site_data.call(this, "langref/catalog"));
+      baseUrl = "langref"
    }
-
-
 
    let key = manual_key_from_path.call(this, page.path);
    let context = this;
@@ -62,6 +63,8 @@ hexo.extend.helper.register('get_document_catalog', function(){
    if ("mainEntry" == page.subtype || "versionEntry" == page.subtype) {
       catalog.forEach(function(category){
          if (category.key == "prologue") {
+            category.isOpen = true;
+         } else if (category.key == "basic") {
             category.isOpen = true;
          }
       });

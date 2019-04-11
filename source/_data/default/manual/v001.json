@@ -1,33 +1,33 @@
 [{
-  "text": "Prologue",
+  "text": "序言",
   "key": "prologue",
   "children": [{
-    "text": "Introduction",
+    "text": "简介",
     "key": "introduction"
   },{
-    "text": "Release notes",
+    "text": "发布日志",
     "key": "releasenotes"
   }, {
-    "text": "Git branch design",
+    "text": "Git 分支管理",
     "key": "repobranchdesc"
   }, {
-    "text": "Contribution guide",
+    "text": "代码贡献说明",
     "key": "contributionguide"
   }]
 }, {
-  "text": "Compilation & Deployment",
+  "text": "编译与部署",
   "key": "dependence",
   "children": [{
-    "text": "Dependence environment",
+    "text": "环境依赖",
     "key": "dependdesc"
   },{
-    "text": "Prepare workspace",
+    "text": "工作空间准备",
     "key": "preparedevelhost"
   },{
-    "text": "CMake Options",
+    "text": "CMake 选项说明",
     "key": "cmakevardesc"
   },{
-    "text": "Compile polarphp",
+    "text": "编译 polarphp",
     "key": "compilepolarphp"
   }]
 }]
