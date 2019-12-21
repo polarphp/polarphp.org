@@ -2,8 +2,8 @@ common:
   readmore: "更多"
   empty_data: "没有更多数据了"
 index:
-  page_title: "polarphp - The runtime container of PHP programming language"
-  slogan: "全新的 PHP 语言的运行时容器"
+  page_title: "polarphp - 全新的 PHP 语言编译器与运行时"
+  slogan: "全新的 PHP 语言编译器与运行时"
   get_started: "开始学习"
   gitee_repo: "Gitee 仓库"
   github_repo: "Github 仓库"
@@ -54,8 +54,8 @@ blog:
 post:
   page_title_suffix: "polarphp 项目博客"
 about:
-  page_title: "Detail infomation about polarphp project and qcoreteam organization"
-  page_changelog_title: "Changelog about polarphp project"
+  page_title: "关于我们"
+  page_changelog_title: "polarphp 更新日志"
   page_become_sponsor_title: "Help us to become a sponsor of polarphp project"
   page_become_developer_title: "Come with us let the polarphp project better"
   page_become_partner_title: "Become a partner and let more people know about polarphp project"

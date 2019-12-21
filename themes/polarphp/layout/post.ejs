@@ -40,13 +40,13 @@ let title = page.title;
             </div>
             <div class="uk-grid-small uk-child-width-expand@s uk-text-center page-nav" uk-grid>
                 <% if(prev) { %>
-                <div class="uk-width-1-1@s uk-width-1-2@m uk-flex uk-flex-left nav-item">
+                <div class="uk-width-1-1@s <% if (next) { %>uk-width-1-2@m<% } %> uk-flex uk-flex-left nav-item">
                     <span data-uk-icon="icon: chevron-left"></span>
                     <div class="uk-text-break uk-text-left"><%- polarphp_atricle_render_link(prev) %></div>
                 </div>
                 <% } %>
                 <% if (next) {%>
-                <div class="uk-width-1-1@s uk-width-1-2@m uk-width-1-2@m uk-flex uk-flex-right nav-item nav-item-right">
+                <div class="uk-width-1-1@s <% if (prev) {%> uk-width-1-2@m <% } %> uk-flex uk-flex-right nav-item nav-item-right">
                     <div class="uk-text-break uk-text-right"><%- polarphp_atricle_render_link(next) %></div>
                     <span data-uk-icon="icon: chevron-right"></span>
                 </div>

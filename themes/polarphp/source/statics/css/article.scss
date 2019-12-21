@@ -40,6 +40,7 @@ body {
     }
     margin-top: 20px;
     font-size:1.2em;
+    line-height: 1.8em;
     @media (min-width: 640px) {
       margin-top: 30px;
       line-height: 2em;
@@ -53,6 +54,11 @@ body {
       code {
         padding-bottom: 15px;
         padding-top: 15px;
+        background: #fbfbfd;
+        color: #6e6e71;
+        font-family:source-code-pro,monospace;
+        font-size: 12.8px;
+        font-weight: lighter!important;
         @media (max-width: 640px) {
           width: 1300px;
         }
@@ -103,12 +109,6 @@ body {
   }
   svg {
     color: $polarphp-link-color;
-    height: 1.2em;
-    width:1.2em;
-    @media (min-width: 640px) {
-      height: 25px;
-      width:25px;
-    }
     padding-right: 5px;
     padding-left:5px;
   }

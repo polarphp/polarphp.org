@@ -59,9 +59,6 @@ body {
       }
       .loginfo-item {
         margin-top: 10px;
-        @media (min-width: 640px) {
-          margin-top: 20px;
-        }
         .uk-label {
           font-family: $global-font-family!important;
           height:20px!important;

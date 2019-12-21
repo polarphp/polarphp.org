@@ -1,6 +1,7 @@
 [{
-  "title": "The official website (2018/07/16)",
+  "title": "polarphp 项目立项 (2018/08/16)",
   "logs": [
-    {"type": "added", "text": "desgin official website"}
+    {"type": "added", "text": "官网完成设计并且上线"},
+    {"type": "added", "text": "创建项目 github/gitee 官方库"}
   ]
 }]

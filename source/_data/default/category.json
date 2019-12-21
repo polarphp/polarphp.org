@@ -3,19 +3,9 @@
     "name": "首页",
     "url": "/"
   },
-  "get_start": {
-    "name": "文档",
-    "url": "/get_started/index.html",
-    "children": [{
-      "name": "参考手册",
-      "url": "/manual/index.html"
-    },{
-      "name": "标准库 API 文档",
-      "url": "/apidocs/libpdk/index.html"
-    },{
-      "name": "语言参考规范",
-      "url": "/langref/index.html"
-    }]
+  "langref": {
+    "name": "语言规范",
+    "url": "/langref/index.html"
   },
   "blog": {
     "name": "博客",
