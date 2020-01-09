@@ -1,8 +1,32 @@
 [{
-  "text": "基础知识",
-  "key": "basic",
+  "text": "语言规范简介",
+  "key": "introduction"
+},{
+  "text": "词法结构",
+  "key": "Lexcial"
+},{
+  "text": "类型系统",
+  "key": "TypeSystem"
+},{
+  "text": "表达式",
+  "key": "Exprs"
+},{
+  "text": "语句",
+  "key": "Stmts"
+},{
+  "text": "模块系统",
+  "key": "ModuleSystem"
+},{
+  "text": "内存模型",
+  "key": "MemoryModel"
+},{
+  "text": "语言运行时",
+  "key": "Runtime"
+},{
+  "text": "附录",
+  "key": "appendices",
   "children": [{
-    "text": "规范简介",
-    "key": "introduction"
+    "text": "语法小结",
+    "key":"grammer_summary"
   }]
 }]

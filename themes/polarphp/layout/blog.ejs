@@ -3,10 +3,12 @@ let items = [];
 page.posts.forEach(function(doc){
     //获取第一张图片
     let matches = doc.content.match(/<img.*?src\s*?=\s*['"]([^'"]+)['"]/i);
+    var excerpt = doc.excerpt.replace(/<img.*?\/?>/g, "");
+    excerpt = excerpt.replace(/<h(\d)+.*?>.*?<\/h\1>/g, "");
     items.push({
         title: doc.title,
         date: doc.date.format("YYYY/MM/DD HH:mm:ss"),
-        excerpt: doc.excerpt.replace(/<img.*?\/?>/g, ""),
+        excerpt: excerpt,
         link: url_for(doc.canonical_path),
         coverImage: matches ? matches[1] : null
     });
@@ -28,16 +30,16 @@ let nextLink = page.next_link == "" ? null : url_for(page.next_link);
             <div class="blog-list-item">
                 <div class="title"><a href="<%- info.link %>"><%- info.title %></a></div>
                 <div class="uk-flex uk-flex-left meta"><%- info.date %></div>
-                <% if (info.coverImage) { %>
-                <div class="meta-img uk-margin-medium-top uk-text-center"><img src="<%- info.coverImage %>"/></div>
-                <% } %>
+<!--                <% if (info.coverImage) { %>-->
+<!--                <div class="meta-img uk-margin-medium-top uk-text-center"><img src="<%- info.coverImage %>"/></div>-->
+<!--                <% } %>-->
                 <% if (info.excerpt != "") { %>
                 <div class="excerpt uk-margin-medium-top uk-text-break">
                     <%- info.excerpt %>
                 </div>
                 <% } %>
                 <div>
-                    <button class="uk-button uk-button-default goto-detail-btn uk-margin-medium-top"
+                    <button class="uk-button uk-button-default goto-detail-btn uk-margin-small-top"
                     onclick="window.location.assign('<%- info.link %>')">
                         <%= __("common.readmore") %></button>
                 </div>

@@ -54,9 +54,10 @@ body {
       code {
         padding-bottom: 15px;
         padding-top: 15px;
-        background: #fbfbfd;
+        background: #f9f7f7;
         color: #6e6e71;
         font-family:source-code-pro,monospace;
+        box-shadow: 0 1px 1px rgba(0,0,0,.075) !important;
         font-size: 12.8px;
         font-weight: lighter!important;
         @media (max-width: 640px) {

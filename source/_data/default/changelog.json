@@ -4,4 +4,9 @@
     {"type": "added", "text": "官网完成设计并且上线"},
     {"type": "added", "text": "创建项目 github/gitee 官方库"}
   ]
+},{
+  "title": "polarphp 编译器语言规范草案制定 (2019/08/16)",
+  "logs": [
+    {"type": "added", "text": "完成语言规范草案官网栏目"}
+  ]
 }]
