@@ -124,20 +124,20 @@ title: polarphp 支持语言的语法结构汇总
 <pre>
 <i id = "grammer_keyword">keyword:</i>
     <i>(one of)</i>
-    <i>abstract   and   array   as   break</i>
-    <i>callable   case   catch   class   clone</i>
-    <i>const   continue   declare   default   die</i>
-    <i>do   echo   else   elseif   empty</i>
-    <i>enddeclare   exit   extends   final   finally</i>
-    <i>for   foreach   function   global   goto</i>
-    <i>if   implements   instanceof   insteadof   interface</i>
-    <i>list   namespace   new   or   thread_local</i>
-    <i>private   protected   public   return   static</i>
-    <i>switch   throw   trait   try   use</i>
-    <i>var   while   xor   yield   yield from</i>
-    <i>throws   import   module   fallthrough   synchronized</i>
-    <i>volatile   void   transient   self   parent</i>
-    <i>let   export   assert</i>
+    abstract   and   array   as   break
+    callable   case   catch   class   clone
+    const   continue   declare   default   die
+    do   echo   else   elseif   empty
+    enddeclare   exit   extends   final   finally
+    for   foreach   function   global   goto
+    if   implements   instanceof   insteadof   interface
+    list   namespace   new   or   thread_local
+    private   protected   public   return   static
+    switch   throw   trait   try   use
+    var   while   xor   yield   yield from
+    throws   import   module   fallthrough   synchronized
+    volatile   void   transient   self   parent
+    let   export   assert
 </pre>
 
 </div>
@@ -148,7 +148,7 @@ title: polarphp 支持语言的语法结构汇总
 <pre>
 <i id = "grammer_punctuator">punctuator:</i>
     <i>(one of)</i>
-    <i>[   ]   (   )   {   }   ,   .   ...   @   ::</i>
+    [   ]   (   )   {   }   ,   .   ...   @   ::
 </pre>
 
 </div>
@@ -159,11 +159,11 @@ title: polarphp 支持语言的语法结构汇总
 <pre>
 <i id = "grammer_operator">operator:</i>
     <i>(one of)</i>
-    <i>=   >   <   !   ~   ?   :   -></i>
-    <i>==   >=   &lt;=    !=    &&    ||   ++   --   ===   !==</i>
-    <i>+   -   *   /   &   |   ^   %   <<   >>   ??</i>
-    <i>+=   -=   *=   /=   &=   |=   ^=   %=   &lt;&lt;=   >>=</i>
-    <i>**   **=   <=></i>
+    =   >   <   !   ~   ?   :   ->
+    ==   >=   &lt;=    !=    &&    ||   ++   --   ===   !==
+    +   -   *   /   &   |   ^   %   <<   >>   ??
+    +=   -=   *=   /=   &=   |=   ^=   %=   &lt;&lt;=   >>=
+    **   **=   <=>
 </pre>
 
 </div>
@@ -269,7 +269,7 @@ title: polarphp 支持语言的语法结构汇总
 
 <i id = "grammer_hex_digit">hex_digit:</i>
     <i>(one of)</i>
-    <i>0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E F</i>
+    0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E F
 
 <i id = "grammer_hex_digits_and_underscores">hex_digits_and_underscores:</i>
     <a href = "#grammer_hex_digit_or_underscore">hex_digit_or_underscore</a>
@@ -289,7 +289,7 @@ title: polarphp 支持语言的语法结构汇总
 
 <i id = "grammer_octal_digit">octal_digit:</i>
     <i>(one of)</i>
-    <i>0 1 2 3 4 5 6 7</i>
+    0 1 2 3 4 5 6 7
 
 <i id = "grammer_octal_digits_and_underscores">octal_digits_and_underscores:</i>
     <a href = "#grammer_octal_digit_or_underscore">octal_digit_or_underscore</a>
@@ -309,7 +309,7 @@ title: polarphp 支持语言的语法结构汇总
 
 <i id = "grammer_binary_digit">binary_digit:</i>
     <i>(one of)</i>
-    <i>0 1</i>
+    0 1
 
 <i id = "grammer_binary_digits_and_underscores">binary_digits_and_underscores:</i>
     <a href = "#grammer_binary_digit_or_underscore">binary_digit_or_underscore</a>
@@ -318,7 +318,6 @@ title: polarphp 支持语言的语法结构汇总
 <i id = "grammer_binary_digit_or_underscore">binary_digit_or_underscore:</i>
     <a href = "#grammer_binary_digit">binary_digit</a>
     _
-
 </pre>
 
 </div>
@@ -369,7 +368,6 @@ title: polarphp 支持语言的语法结构汇总
 <i id = "grammer_binary_exponent_indicator">binary_exponent_indicator:</i>
     <i>(one of)</i>
     p P
-
 </pre>
 
 </div>
@@ -635,4 +633,77 @@ title: polarphp 支持语言的语法结构汇总
 
 ### 模块语法结构
 
+<div class = "grammer-section">
+<div class = "grammer-title">模块相关语法：</div>
+
+<pre>
+<i id = "module_declaration">module_declaration:</i>
+    <i>export</i><sub>opt</sub> <a href = "#grammer_annotations">annotations</a><sub>opt</sub> module <a href = "#grammer_module_name">module_name</a> ;
+
+<i id = "grammer_module_import_declaration">module_import_declaration:</i>
+    <i>export</i><sub>opt</sub> import <a href = "#grammer_module_name">module_name</a> ;
+</pre>
+
+</div>
+
 ### 命名空间语法结构
+
+<div class = "grammer-section">
+<div class = "grammer-title">命名空间定义语法：</div>
+
+<pre>
+<i id = "namespace_definition">namespace_definition:</i>
+    namespace <a href = "#grammer_namespace_name">namespace_name</a> ;
+    namespace <a href = "#grammer_namespace_name">namespace_name</a><sub>opt</sub> <a href = "#grammer_top_stmt_codeblock">top_stmt_codeblock</a>
+</pre>
+
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">命名空间引入语法：</div>
+
+<pre>
+<i id = "grammer_namespace_use_declaration">namespace_use_declaration:</i>
+    use <a href = "#grammer_mixed_group_use_declaration">mixed_group_use_declaration</a> ;
+    use <a href = "#grammer_use_type">use_type</a> <a href = "#grammer_group_use_declaration">group_use_declaration</a> ;
+    use <a href = "#grammer_use_type"><i>use_type</i></a><sub>opt</sub> <a href = "#grammer_use_declarations">use_declarations</a> ;
+
+<i id = "grammer_use_type">use_type:</i>
+    <i>(one of)</i>
+    const
+    function
+
+<i id = "grammer_group_use_declaration">group_use_declaration:</i>
+    \<sub>opt</sub> <a href = "#grammer_namespace_name">namespace_name</a> \ { <a href = "#grammer_inline_use_declarations">unprefixed_use_declarations</a> ,<sub>opt</sub> }
+
+<i id = "grammer_mixed_group_use_declaration">mixed_group_use_declaration:</i>
+    \<sub>opt</sub> <a href = "#grammer_namespace_name">namespace_name</a> \ { <a href = "#grammer_inline_use_declarations">inline_use_declarations</a> ,<sub>opt</sub> }
+
+<i id = "grammer_inline_use_declarations">inline_use_declarations:</i>
+    <a href = "#grammer_inline_use_declaration">inline_use_declaration</a>
+    <a href = "#grammer_inline_use_declaration">inline_use_declaration</a> <i>inline_use_declarations</i>
+
+<i id = "grammer_unprefixed_use_declarations">unprefixed_use_declarations:</i>
+    <a href = "#grammer_unprefixed_use_declaration">unprefixed_use_declaration</a>
+    <a href = "#grammer_unprefixed_use_declaration">unprefixed_use_declaration</a> <i>unprefixed_use_declarations</i>
+
+<i id = "grammer_use_declarations">use_declarations:</i>
+    <a href = "#grammer_use_declaration">use_declaration</a>
+    <a href = "#grammer_use_declaration">use_declaration</a> <i>use_declarations</i>
+
+<i id = "grammer_inline_use_declaration">inline_use_declaration:</i>
+    <a href = "#grammer_unprefixed_use_declaration">unprefixed_use_declaration</a>
+    <a href = "#grammer_use_type">use_type</a> <a href = "#grammer_unprefixed_use_declaration">unprefixed_use_declaration</a>
+
+<i id = "grammer_unprefixed_use_declaration">unprefixed_use_declaration:</i>
+    <a href = "#grammer_namespace_name">namespace_name</a>
+    <a href = "#grammer_namespace_name">namespace_name</a> as <a href = "#grammer_identifier">identifier</a>
+
+<i id = "grammer_use_declaration">use_declaration:</i>
+    \<sub>opt</sub> <a href = "#grammer_unprefixed_use_declaration">unprefixed_use_declaration</a>
+
+</pre>
+
+</div>
+
+### 编译单元语法结构

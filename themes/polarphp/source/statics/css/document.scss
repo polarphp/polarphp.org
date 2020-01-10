@@ -4,6 +4,7 @@ body {
   background-color: #FAFAFA!important;
 }
 $polarphp-manual-page-width: 1200px;
+$font: source-code-pro, Monaco, Menlo, 'Courier New', Roboto, monospace, "Gotham Rounded", "微软雅黑", -apple-system, BlinkMacSystemFont, "宋体", "Segoe UI", "Helvetica Neue" !important;
 .manual-page-container {
   max-width: $polarphp-manual-page-width;
   margin-top: 20px!important;
@@ -88,10 +89,11 @@ $polarphp-manual-page-width: 1200px;
           background: #fbfbfd;
           box-shadow: 0 1px 1px rgba(0,0,0,.075);
           padding: 10px!important;
-          font-size: 14px;
-          font-family: source-code-pro, "Gotham Rounded", "微软雅黑", -apple-system, BlinkMacSystemFont, "宋体", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+          font-size: 12px;
+          font-family:$font;
           a {
-           text-decoration: none;
+            text-decoration: none;
+            font-family:$font;
             &:hover {
               text-decoration: underline;
             }
