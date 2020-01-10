@@ -20,7 +20,7 @@ index:
   feature_cpp11_desc: "polarphp 编译器的运行时和标准库本身是一个比较大的 C++ 项目，我们在实现的时候特别注意项目的架构设计，代码的阅读性以及项目的可维护性，C++17 标准的很多特性能够帮助我们实现这些设计目标，从而带给内核开发者以及 PHP 用户空间一个可以依赖的代码基础。"
   fearure_opensource: "开放源代码"
   feature_opensource_desc: "polarphp 编译器是一个采用 Apache Licence 2.0 协议的开源项目，源代码托管在 github 和 gitee 平台，您可以放心的部署 polarphp 运行时并且在其基础上运行 PHP 应用程序，一切都是自由的。"
-  tutorials: "快速入门"
+  tutorials: "推荐阅读"
   latest_posts: "最新博客"
   empty_list: "没有数据"
   sponsor_title: "赞助者"
