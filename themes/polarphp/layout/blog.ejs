@@ -4,11 +4,12 @@ page.posts.forEach(function(doc){
     //获取第一张图片
     let matches = doc.content.match(/<img.*?src\s*?=\s*['"]([^'"]+)['"]/i);
     var excerpt = doc.excerpt.replace(/<img.*?\/?>/g, "");
-    excerpt = excerpt.replace(/<h(\d)+.*?>.*?<\/h\1>/g, "");
+    excerpt = excerpt.replace(/<(.*?)>/g, "");
+    excerpt = excerpt.replace(/<\/(.*?)>/g, "");
     items.push({
         title: doc.title,
         date: doc.date.format("YYYY/MM/DD HH:mm:ss"),
-        excerpt: excerpt,
+        excerpt: excerpt.substr(0, 300) + " ... ",
         link: url_for(doc.canonical_path),
         coverImage: matches ? matches[1] : null
     });

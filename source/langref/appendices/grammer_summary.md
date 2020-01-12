@@ -30,7 +30,6 @@ title: polarphp 支持语言的语法结构汇总
 <i id = "grammer_input_characters">input_characters:</i>
     <a href = "#grammer_input_character">input_character</a>
     <a href = "#grammer_input_character">input_character</a> <i>input_characters</i>
-
 </pre>
     
 </div>
@@ -87,7 +86,6 @@ title: polarphp 支持语言的语法结构汇总
 
 <i id = "grammer_end_of_line_comment">end_of_line_comment:</i>
     // <a href = "#grammer_input_characters"><i>input_characters</i></a><sub>opt</sub>
-
 </pre>
 
 </div>
@@ -191,7 +189,7 @@ title: polarphp 支持语言的语法结构汇总
 </div>
 
 <div class = "grammer-section">
-<div class = "grammer-title">常量语法：</div>
+<div class = "grammer-title">字面量语法：</div>
 
 <pre>
 <i id = "grammer_literal">literal:</i>
@@ -206,7 +204,7 @@ title: polarphp 支持语言的语法结构汇总
 </div>
 
 <div class = "grammer-section">
-<div class = "grammer-title">整型常量语法：</div>
+<div class = "grammer-title">整型字面量语法：</div>
 
 <pre>
 <i id = "grammer_integer_literal">integer_literal:</i>
@@ -323,7 +321,7 @@ title: polarphp 支持语言的语法结构汇总
 </div>
 
 <div class = "grammer-section">
-<div class = "grammer-title">浮点型常量语法：</div>
+<div class = "grammer-title">浮点型字面量语法：</div>
 
 <pre>
 <i id = "grammer_floating_point_literal">floating_point_literal:</i>
@@ -373,7 +371,7 @@ title: polarphp 支持语言的语法结构汇总
 </div>
 
 <div class = "grammer-section">
-<div class = "grammer-title">布尔型常量语法：</div>
+<div class = "grammer-title">布尔型字面量语法：</div>
 
 <pre>
 <i id = "grammer_boolean_literal">boolean_literal:</i>
@@ -384,7 +382,7 @@ title: polarphp 支持语言的语法结构汇总
 </div>
 
 <div class = "grammer-section">
-<div class = "grammer-title">字符型常量语法：</div>
+<div class = "grammer-title">字符型字面量语法：</div>
 
 <pre>
 <i id = "grammer_character_literal">character_literal:</i>
@@ -413,13 +411,12 @@ title: polarphp 支持语言的语法结构汇总
 <i id = "grammer_octal_escape">zero_to_three:</i>
     <i>(one of)</i>
     0 1 2 3
-
 </pre>
 
 </div>
 
 <div class = "grammer-section">
-<div class = "grammer-title">字符串型常量语法：(TODO 未实现 Heredoc 和 Nowdoc)</div>
+<div class = "grammer-title">字符串字面量语法：(TODO 未实现 Heredoc 和 Nowdoc)</div>
 
 <pre>
 <i id = "grammer_string_literal">string_literal:</i>
@@ -448,7 +445,7 @@ title: polarphp 支持语言的语法结构汇总
 </div>
 
 <div class = "grammer-section">
-<div class = "grammer-title">空值常量语法：</div>
+<div class = "grammer-title">空值字面量语法：</div>
 
 <pre>
 <i id = "grammer_null_literal">null_literal:</i>
@@ -596,7 +593,6 @@ title: polarphp 支持语言的语法结构汇总
 <i id = "#grammer_wildcard_bounds">wildcard_bounds:</i>
     extends <a href = "#grammer_extended_reference_type">extended_reference_type</a>
     super <a href = "#grammer_extended_reference_type">extended_reference_type</a>
-
 </pre>
 
 </div>
@@ -626,7 +622,6 @@ title: polarphp 支持语言的语法结构汇总
 <i id = "grammer_type_name_item">type_name_item:</i>
     <a href = "#grammer_type_identifier">type_identifier</a>
     <a href = "#grammer_type_identifier">type_identifier</a> :: <i>type_name_item</i>
-    
 </pre>
 
 </div>
@@ -641,7 +636,7 @@ title: polarphp 支持语言的语法结构汇总
     <i>export</i><sub>opt</sub> <a href = "#grammer_annotations">annotations</a><sub>opt</sub> module <a href = "#grammer_module_name">module_name</a> ;
 
 <i id = "grammer_module_import_declaration">module_import_declaration:</i>
-    <i>export</i><sub>opt</sub> import <a href = "#grammer_module_name">module_name</a> ;
+    <i>transient</i><sub>opt</sub> import <a href = "#grammer_module_name">module_name</a> ;
 </pre>
 
 </div>
@@ -652,9 +647,9 @@ title: polarphp 支持语言的语法结构汇总
 <div class = "grammer-title">命名空间定义语法：</div>
 
 <pre>
-<i id = "namespace_definition">namespace_definition:</i>
+<i id = "namespace_definition">namespace_declaration:</i>
     namespace <a href = "#grammer_namespace_name">namespace_name</a> ;
-    namespace <a href = "#grammer_namespace_name">namespace_name</a><sub>opt</sub> <a href = "#grammer_top_stmt_codeblock">top_stmt_codeblock</a>
+    namespace <a href = "#grammer_namespace_name">namespace_name</a><sub>opt</sub> { <a href = "#grammer_declaration_seq">declaration_seq</a> }
 </pre>
 
 </div>
@@ -701,9 +696,355 @@ title: polarphp 支持语言的语法结构汇总
 
 <i id = "grammer_use_declaration">use_declaration:</i>
     \<sub>opt</sub> <a href = "#grammer_unprefixed_use_declaration">unprefixed_use_declaration</a>
-
 </pre>
 
 </div>
 
 ### 编译单元语法结构
+
+<div class = "grammer-section">
+<div class = "grammer-title">编译单元语法：</div>
+
+<pre>
+<i id = "grammer_translation_unit">translation_unit:</i>
+    <a href = "#grammer_top_level_declaration_seq"><i>top_level_declaration_seq</i></a><sub>opt</sub>
+    <a href = "#grammer_module_declaration">module-declaration</a> <a href = "#grammer_top_level_declaration_seq"><i>top_level_declaration_seq</i></a><sub>opt</sub>
+
+<i id = "grammer_top_level_declaration_seq">top_level_declaration_seq:</i>
+    <a href = "#grammer_top_level_declaration">top_level_declaration</a>
+    <a href = "#grammer_top_level_declaration">top_level_declaration</a> <i>top_level_declaration_seq</i>
+
+<i id = "grammer_top_level_declaration">top_level_declaration:</a>
+    <a href = "#grammer_module_import_declaration">module_import_declaration</a>
+    <a href = "#grammer_namespace_declaration">namespace_declaration</a>
+    <a href = "#grammer_namespace_use_declaration">namespace_use_declaration</a>
+    <a href = "#grammer_declaration">declaration</a>
+</pre>
+
+</div>
+
+### 声明与定义相关语法
+
+<div class = "grammer-section">
+<div class = "grammer-title">声明语法：</div>
+
+<pre>
+<i id = "grammer_declaration_seq">declaration_seq:</i>
+    <a href = "grammer_declaration">declaration</a>
+    <a href = "grammer_declaration">declaration</a> <i>declaration_seq</i>
+
+<i id = "grammer_declaration">declaration:</i>
+    <a href = "#grammer_export_declaration">export_declaration</a>
+    <a href = "#grammer_simple_declaration">simple_declaration</a>
+    <a href = "#grammer_typealias_declaration">typealias_declaration</a>
+    <a href = "#grammer_enum_declaration">enum_declaration</a>
+    <a href = "#grammer_function_declaration">function_declaration</a>
+    <a href = "#grammer_trait_declaration">trait_declaration</a>
+    <a href = "#grammer_class_declaration">class_declaration</a>
+    <a href = "#grammer_interface_declaration">interface_declaration</a>
+    <a href = "#grammer_extension_declaration">extension_declaration</a>
+
+<i id = "grammer_export_declaration">export_declaration</i>
+    export <a href = "#grammer_declaration">declaration</a>
+    export { <a href = "#grammer_declaration_seq"><i>declaration_seq</i></a><sub>opt</sub> }
+</pre>
+
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">简单变量定义语法：</div>
+
+<pre>
+<i id = "grammer_simple_declaration">simple_declaration:</i>
+    <a href = "#grammer_annotations">annotations</a><sub>opt</sub> <a href = "#grammer_decl_specifier_seq">decl_specifier_seq</a> <a href = "#grammer_type">type</a> <a href = "#grammer_init_declarator_list"><i>init_declarator_list</i></a><sub>opt</sub> ;
+
+<i id = "grammer_decl_specifier_seq">decl_specifier_seq:</i>
+    <a href = "#grammer_decl_specifier">decl_specifier</a>
+    <a href = "#grammer_decl_specifier">decl_specifier</a> <i>decl_specifier_seq</i>
+
+<i id = "grammer_decl_specifier">decl_specifier:</i>
+    weak
+    unowned
+    const
+    var
+    thread_local
+
+<i id = "grammer_init_declarator_list">init_declarator_list:</i>
+    <a href = "#grammer_init_declarator">init_declarator</a>
+    <a href = "#grammer_init_declarator">init_declarator</a> , <i>init_declarator_list</i>
+
+<i id = "grammer_init_declarator">init_declarator:</i>
+    <a href = "#grammer_variable_declarator_id">variable_declarator_id</a> <a href = "#grammer_variable_initializer_clause"><i>variable_initializer_clause</i></a><sub>opt</sub>
+
+<i id = "grammer_variable_declarator_id">variable_declarator_id:</i>
+    <a href = "#grammer_identifier">identifier</a> <a href = "#grammer_dimensions">dimensions</a><sub>opt</sub>
+
+<i id = "grammer_variable_initializer_clause">variable_initializer_clause:</i>
+    = <a href = "#grammer_variable_initializer">variable_initializer</a>
+
+<i id = "grammer_variable_initializer">variable_initializer:</i>
+    <a href = "#grammer_expression">expression</a>
+    <a href = "#grammer_array_initializer">array_initializer</a>
+
+<i id = "grammer_array_initializer">array_initializer:</a>
+    { <a href = "#grammer_variable_initializer_list">variable_initializer_list</a><sub>opt</sub> ,<sub>opt</sub> }
+
+<i id = "grammer_variable_initializer_list">variable_initializer_list:</i>
+    <a href = "#grammer_variable_initializer">variable_initializer</a>
+    <a href = "#grammer_variable_initializer">variable_initializer</a> , <i>variable_initializer_list</i><sub>opt</sub>
+</pre>
+
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">类定义语法：</div>
+
+<pre>
+<i id = "grammer_class_declaration">class_declaration:</i>
+    <a href = "#grammer_class_modifiers"><i>class_modifiers</i></a><sub>opt</sub> class <a href = "#grammer_type_identifier">type_identifier</a> <a href = "#grammer_type_parameters"><i>type_parameters</i></a><sub>opt</sub> <a href = "#grammer_super_class"><i>super_class</i></a><sub>opt</sub> <a href = "#grammer_super_interfaces"><i>super_interfaces</i></a><sub>opt</sub> <a href = "#grammer_class_body">class_body</a>
+
+<i id = "grammer_class_modifiers">class_modifiers:</i>
+    <a href = "#grammer_class_modifier">class_modifier</a>
+    <a href = "#grammer_class_modifier">class_modifier</a> <i>class_modifiers</i>
+
+<i id = "grammer_class_modifier">class_modifier:</i>
+    <a href = "#grammer_annotation">annotation</a> 
+    public
+    protected 
+    private 
+    abstract 
+    final
+
+<i id = "grammer_super_class">super_class:</i>
+    extends <a href = "#grammer_class_type">class_type</a>
+
+<i id = "grammer_super_interfaces">super_interfaces:</i>
+    implements <a href = "#grammer_interface_type_list">interface_type_list</a>
+
+<i id = "grammer_interface_type_list">interface_type_list:</a>
+    <a href = "#grammer_interface_type">interface_type</a>
+    <a href = "#grammer_interface_type">interface_type</a> <i>interface_type_list</i>
+
+<i id = "grammer_class_body">class_body:</i>
+    { <a href = "#grammer_ClassBodyDeclaration"><i>class_body_declarations</i></a><sub>opt</sub> }
+
+<i id = "grammer_class_body_declarations">class_body_declarations:</a>
+    <a href = "#grammer_class_body_declaration">class_body_declaration</a>
+    <a href = "#grammer_class_body_declaration">class_body_declaration</a> <i>class_body_declarations</i>
+
+<i id = "grammer_class_body_declaration">class_body_declaration:</i>
+    <a href = "#grammer_class_member_declaration">class_member_declaration</a>
+    <a href = "#grammer_constructor_declaration">constructor_declaration</a>
+    <a href = "#grammer_destructor_declaration">destructor_declaration</a>
+
+<i id = "grammer_class_member_declaration">class_member_declaration:</i>
+    <a href = "#grammer_field_declaration">field_declaration</a>
+    <a href = "#grammer_field_declaration">method_declaration</a>
+    <a href = "#grammer_class_declaration">class_declaration</a>
+    <a href = "#grammer_interface_declaration">interface_declaration</a>
+    ;
+
+</pre>
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">类属性定义语法：</div>
+
+<pre>
+<i id = "grammer_field_declaration">field_declaration:</i>
+    <a href = "#grammer_field_modifiers"><i>field_modifiers</i></a><sub>opt</sub> <a href = "#grammer_type">type</a> <a href = "#grammer_variable_declarator_list">variable_declarator_list</a> ;
+
+<i id = "grammer_field_modifiers">field_modifiers</i>
+    <a href = "#grammer_field_modifier">field_modifier</a>
+    <a href = "#grammer_field_modifier">field_modifier</a> <i>field_modifiers</i>
+
+<i id = "grammer_field_modifier">field_modifier:</i>
+    <i>(one of)</i>
+    <a href = "#grammer_annotation">annotation</a>
+    public protected volatile
+    private static transient
+    const
+
+<i id = "grammer_variable_declarator_list">variable_declarator_list:</i>
+    <a href = "#grammer_variable_declarator">variable_declarator</a>
+    <a href = "#grammer_variable_declarator">variable_declarator</a> , <i>variable_declarator_list</i>
+
+<i id = "grammer_variable_declarator">variable_declarator:</i>
+    <a href = "#grammer_variable_declarator_id">variable_declarator_id</a> <a href = "#grammer_variable_initializer_clause"><i>variable_initializer_clause</i></a><sub>opt</sub>
+</pre>
+
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">类方法定义语法：</div>
+
+<pre>
+<i id = "grammer_method_declaration">method_declaration:</i>
+    <a href = "#grammer_method_modifiers"><i>method_modifiers</i></a><sub>opt</sub> <a href = "#grammer_method_header">method_header</a> <a href = "#grammer_method_header">method_body</a>
+
+<i id = "grammer_method_modifiers">method_modifiers:</i>
+    <a href = "#grammer_method_modifier">method_modifier</a>
+    <a href = "#grammer_method_modifier">method_modifier</a> <i>method_modifiers</i>
+
+<i id = "grammer_method_modifier">method_modifier:</i>
+    <i>(one of)</i>
+    <a href = "#grammer_annotation">annotation</a>
+    public protected private
+    abstract static final 
+    synchronized native
+
+<i id = "grammer_method_header">method_header:</a>
+    <a href = "#grammer_annotations"><i>annotations</i></a><sub>opt</sub> <a href = "#grammer_type_parameters"><i>type_parameters</i></a><sub>opt</sub> function <a href = "#grammer_method_declarator">method_declarator</a> <a href = "#grammer_result_type">result_type</a>
+
+<i id = "grammer_method_declarator">method_declarator:</i>
+    <a href = "#grammer_identifier">identifier</a> ( <a href = "#grammer_formal_parameter_list"><i>formal_parameter_list</i></a><sub>opt</sub> )
+
+<i id = "grammer_result_type">result_type:</i>
+    : <a href = "#grammer_result_type">result_type</a>
+    : void
+
+<i id = "grammer_formal_parameter_list">formal_parameter_list:</i>
+    <a href = "#grammer_formal_parameter">formal_parameter</a>
+    <a href = "#grammer_formal_parameter">formal_parameter</a> , <i>formal_parameter_list</i>
+
+<i id = "grammer_formal_parameter">formal_parameter:</i>
+    <a href = "#grammer_variable_modifiers"><i>variable_modifiers</i></a><sub>opt</sub> <a href = "#grammer_type">type</a> <a href = "#grammer_variable_declarator_id">variable_declarator_id</a> 
+    <a href = "#grammer_variable_arity_parameter">variable_arity_parameter</a>
+
+<i id = "grammer_variable_modifiers">variable_modifiers:</i>
+    <a href = "#grammer_variable_modifier">variable_modifier</a>
+    <a href = "#grammer_variable_modifier">variable_modifier</a> <i>variable_modifiers</i>
+
+<i id = "grammer_variable_modifier">variable_modifier:</i>
+    <a href = "grammer_annotation">annotation</a>
+    const
+
+<i id = "grammer_variable_arity_parameter">variable_arity_parameter:</a>
+    <a href = "#grammer_variable_modifiers"><i>variable_modifiers</i></a><sub>opt</sub> <a href = "#grammer_type">type</a> <a href = "grammer_annotations"><i>annotations</i></a><sub>opt</sub> ... <a href = "#grammer_identifier">identifier</a>
+
+<i id = "grammer_method_body">method_body:</i>
+    <a href = "#grammer_block">block</a>
+    ;
+</pre>
+
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">类构造方法定义语法：</div>
+
+<pre>
+<i id = "grammer_constructor_declaration">constructor_declaration:</i>
+    <a href = "#grammer_constructor_modifiers">constructor_modifiers</a><sub>opt</sub> <a href = "#grammer_constructor_declarator">constructor_declarator</a> <a href = "#grammer_constructor_body">constructor_body</a>
+
+<i id = "grammer_constructor_modifiers">constructor_modifiers:</a>
+    <a href = "#grammer_constructor_modifier">constructor_modifier</a>
+    <a href = "#grammer_constructor_modifier">constructor_modifier</a> <i>constructor_modifiers</i>
+
+<i id = "grammer_constructor_modifier">constructor_modifier:</i>
+    <i>(one of)</i>
+    <a href = "#grammer_annotation">annotation</a>
+    public protected private
+
+<i id = "grammer_constructor_declarator">constructor_declarator:</i>
+    <a href = "#grammer_type_parameters"><i>type_parameters</i></a><sub>opt</sub> function __construct ( <a href = "#grammer_formal_parameter_list"><i>formal_parameter_list</i></a><sub>opt</sub> )
+
+<i id = "grammer_constructor_declarator">constructor_declarator:</i>
+    { <a href = "#grammer_explicit_constructor_invocation">explicit_constructor_invocation</a></a><sub>opt</sub> <a href = "#grammer_block_statements"><i>block_statements</i></a><sub>opt</sub> }
+
+<i id = "grammer_explicit_constructor_invocation">explicit_constructor_invocation</i>
+    <a href = "#grammer_type_arguments"><i>type_arguments</i></a><sub>opt</sub> self ( <a href = "#grammer_argument_list">argument_list</a><sub>opt</sub> ) ;
+    <a href = "#grammer_type_arguments"><i>type_arguments</i></a><sub>opt</sub> parent ( <a href = "#grammer_argument_list">argument_list</a><sub>opt</sub> ) ;
+
+<i href = "grammer_argument_list">argument_list:</i>
+    <a href = "#grammer_expression">expression</a>
+    <a href = "#grammer_expression">expression</a> , <i>argument_list</i>
+
+</pre>
+
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">类析构方法定义语法：</div>
+
+<pre>
+<i id = "grammer_destructor_declaration">destructor_declaration:</i>
+    <a href = "#grammer_destructor_modifiers">destructor_modifiers</a><sub>opt</sub> <a href = "#grammer_destructor_declarator">destructor_declarator</a> <a href = "#grammer_method_header">method_body</a>
+
+<i id = "grammer_destructor_declarator">destructor_declarator:</i>
+    <a href = "#grammer_type_parameters"><i>type_parameters</i></a><sub>opt</sub> function __destruct ( )
+
+<i id = "grammer_destructor_modifiers">destructor_modifiers:</a>
+    <a href = "#grammer_destructor_modifier">destructor_modifier</a>
+    <a href = "#grammer_destructor_modifier">destructor_modifier</a> <i>destructor_modifiers</i>
+
+<i id = "grammer_destructor_modifier">destructor_modifier:</i>
+    <i>(one of)</i>
+    <a href = "#grammer_annotation">annotation</a>
+    public protected private
+</pre>
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">接口定义语法：</div>
+
+<pre>
+<i id = "grammer_interface_declaration">interface_declaration:</i>
+    <a href = "#grammer_interface_modifiers"><i>interface_modifiers</i></a><sub>opt</sub> interface <a href = "#grammer_type_identifier">type_identifier</a> <a href = "#grammer_type_parameters"><i>type_parameters</i></a><sub>opt</sub> <a href = "#grammer_extends_interfaces"><i>extends_interfaces</i></a><sub>opt</sub> <a href = "#grammer_interface_body">interface_body</a>
+
+<i id = "grammer_interface_modifiers">interface_modifiers:</i>
+    <a href = "#grammer_interface_modifier">interface_modifier</a>
+    <a href = "#grammer_interface_modifier">interface_modifier</a> <i>interface_modifiers</i>
+
+<i id = "grammer_interface_modifier">interface_modifier:</i>
+    <i>(one of)</i>
+    <a href = "#grammer_annotation">annotation</a>
+    public protected private
+
+<i id = "grammer_extends_interfaces">extends_interfaces:</i>
+    extends <a href = "#grammer_interface_type_list">interface_type_list</a>
+
+<i id = "grammer_interface_body">interface_body</i>
+    { <a href = "#grammer_interface_member_declarations"><i>interface_member_declarations</i></a><sub>opt</sub> }
+
+<i id = "grammer_interface_member_declarations">interface_member_declarations:</i>
+    <a href = "interface_member_declaration">interface_member_declaration</a>
+    <a href = "interface_member_declaration">interface_member_declaration</a> <i>interface_member_declarations</i>
+
+<i id = "grammer_interface_member_declaration">interface_member_declaration:</i>
+    <a href = "#grammer_constant_declaration">constant_declaration</a>
+    <a href = "#grammer_interface_method_declaration">interface_method_declaration</a>
+    ;
+
+<i id = "grammer_constant_declaration">constant_declaration:</i>
+    <a href = "#grammer_constant_modifiers"><i>constant_modifiers</i></a><sub>opt</sub> <a href = "#grammer_type">type</a> <a href = "#grammer_variable_declarator_list">variable_declarator_list</a> ;
+
+<i id = "grammer_constant_modifiers">constant_modifiers</i>
+    <a href = "#grammer_constant_modifier">constant_modifier</a>
+    <a href = "#grammer_constant_modifier">constant_modifier</a> <i>constant_modifiers</i>
+
+<i id = "grammer_constant_modifier">constant_modifier:</i>
+    <i>(one of)</i>
+    <a href = "#grammer_annotation">annotation</a>
+    public static const
+
+<i id = "grammer_interface_method_declaration">interface_method_declaration</i>
+    <a href = "#grammer_interface_method_modifiers"><i>interface_method_modifiers</i></a><sub>opt</sub> <a href = "#grammer_method_header">method_header</a> ;
+
+<i id = "grammer_interface_method_modifiers">interface_method_modifiers:</i>
+    <a href = "#grammer_interface_method_modifier">interface_method_modifier</a>
+    <a href = "#grammer_interface_method_modifier">interface_method_modifier</a> <i>interface_method_modifiers</i>
+
+<i id = "grammer_interface_method_modifier">interface_method_modifier:</i>
+    <i>(one of)</i>
+    <a href = "#grammer_annotation">annotation</a>
+    public private abstract 
+    default static
+
+</pre>
+
+</div>
+
+### 语句相关语法
+
+
+### 表达式相关语法
