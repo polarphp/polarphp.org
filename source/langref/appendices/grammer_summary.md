@@ -948,7 +948,7 @@ title: polarphp 支持语言的语法结构汇总
 <i id = "grammer_constructor_declarator">constructor_declarator:</i>
     <a href = "#grammer_type_parameters"><i>type_parameters</i></a><sub>opt</sub> function __construct ( <a href = "#grammer_formal_parameter_list"><i>formal_parameter_list</i></a><sub>opt</sub> )
 
-<i id = "grammer_constructor_declarator">constructor_declarator:</i>
+<i id = "grammer_constructor_declarator">constructor_body:</i>
     { <a href = "#grammer_explicit_constructor_invocation">explicit_constructor_invocation</a></a><sub>opt</sub> <a href = "#grammer_block_statements"><i>block_statements</i></a><sub>opt</sub> }
 
 <i id = "grammer_explicit_constructor_invocation">explicit_constructor_invocation</i>
@@ -1046,5 +1046,151 @@ title: polarphp 支持语言的语法结构汇总
 
 ### 语句相关语法
 
+<div class = "grammer-section">
+<div class = "grammer-title">语句块语法：</div>
+
+<pre>
+<i id = "grammer_block">block:</i>
+    { <a href = "#grammer_block_statements"><i>block_statements</i></a><sub>opt</sub> }
+
+<i id = "grammer_block_statements">block_statements:</i>
+    <a href = "#grammer_block_statement">block_statement</a>
+    <a href = "#grammer_block_statement">block_statement</a> <i>block_statements</i>
+
+<i id = "grammer_block_statement">block_statement:</i>
+    <a href = "#grammer_local_variable_declaration_statement">local_variable_declaration_statement</a>
+    <a href = "#grammer_statement">statement</a>
+
+<i id = "grammer_local_variable_declaration_statement">local_variable_declaration_statement:</i>
+    <a href = "#grammer_local_variable_declaration">local_variable_declaration</a> ;
+
+<i id = "grammer_local_variable_declaration">local_variable_declaration:</i>
+    <a href = "#grammer_variable_modifiers"><i>variable_modifiers</i></a><sub>opt</sub> <a href = "#grammer_local_variable_type">local_variable_type</a> <a href = "#grammer_variable_declarator_list">variable_declarator_list</a>
+
+<i id = "grammer_local_variable_type">local_variable_type:</i>
+    <a href = "#grammer_type">type</a>
+    var
+
+<i id = "grammer_statement">statement:</i>
+    <a href = "#grammer_block">block</a>
+    <a href = "#grammer_empty_statement">empty_statement</a>
+    <a href = "#grammer_expression_statement">expression_statement</a>
+    <a href = "#grammer_assert_statement">assert_statement</a>
+    <a href = "#grammer_selection_statement">selection_statement</a>
+    <a href = "#grammer_iteration_statement">iteration_statement</a>
+    <a href = "#grammer_jump_statement">jump_statement</a>
+    <a href = "#grammer_synchronized_statement">synchronized_statement</a>
+    <a href = "#grammer_try_statement">try_statement</a>
+    <a href = "#grammer_labeled_statement">labeled_statement</a>
+    
+<i id = "grammer_labeled_statement">labeled_statement:</i>
+    <a href = "#grammer_identifier">identifier</a> : <a href = "#grammer_statement">statement</a>
+
+<i id = "grammer_empty_statement">empty_statement:</i>
+    ;
+</pre>
+
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">选择语句块语法：</div>
+
+<pre>
+<i id = "grammer_selection_statement">selection_statement:</i>
+    <a href = "#grammer_if_statement">if_statement</a>
+    <a href = "#grammer_switch_statement">switch_statement</a>
+
+<i id = "grammer_if_statement">if_statement:</i>
+    <a href = "#grammer_if_statement_without_else">if_statement_without_else</a>
+    <a href = "#grammer_if_statement_without_else">if_statement_without_else</a> else <a href = "#grammer_statement">statement</a>
+
+<i id = "grammer_if_statement_without_else">if_statement_without_else:</i>
+    if ( <a href = "#grammer_expr">expr</a> ) <a href = "#grammer_statement">statement</a> <a href = "#grammer_elseif_statments"><i>elseif_statments</i></a><sub>opt</sub>
+
+<i id = "grammer_elseif_statments">elseif_statments:</i>
+    <a href = "grammer_elseif_statment">elseif_statment</a>
+    <a href = "grammer_elseif_statment">elseif_statment</a> <i>elseif_statments</i>
+
+<i id = "grammer_elseif_statment">elseif_statment:</i>
+    elseif ( <a href = "#grammer_expr">expr</a> ) <a href = "#grammer_statement">statement</a>
+
+<i id = "grammer_switch_statement">switch_statement:</i>
+    switch ( <a id = "#grammer_expression">expression</a> ) <a href = "#grammer_switch_block">switch_block</a>
+
+<i id = "grammer_switch_block">switch_block:</i>
+    { <a href = "#grammer_switch_block_statement_groups"><i>switch_block_statement_groups</i></a><sub>opt</sub> <a href = "#grammer_switch_labels"><i>switch_labels</i></a><sub>opt</sub> }
+
+<i id = "grammer_switch_block_statement_groups">switch_block_statement_groups:</i>
+    <a href = "grammer_switch_block_statement_group">switch_block_statement_group</a>
+    <a href = "grammer_switch_block_statement_group">switch_block_statement_group</a> <i>switch_block_statement_groups</i>
+
+<i id = "grammer_switch_labels">switch_labels:</a>
+    <a href = "#grammer_switch_label">switch_label</a>
+    <a href = "#grammer_switch_label">switch_label</a> <i>switch_labels</i>
+
+<i id = "grammer_switch_block_statement_group">switch_block_statement_group:</i>
+    <a href = "#grammer_switch_labels">switch_labels</a> <a href = "#grammer_block_statements">block_statements</a>
+
+<i id = "grammer_switch_label">switch_label:</a>
+    case <a href = "#grammer_expression">expression</a> :
+    default :
+</pre>
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">迭代语句块语法：</div>
+
+<pre>
+<i id = "grammer_iteration_statement">iteration_statement:</i>
+    <a href = "#grammer_do_while_statement">do_while_statement</a>
+    <a href = "#grammer_while_statement">while_statement</a>
+    <a href = "#grammer_for_statement">for_statement</a>
+    <a href = "#grammer_foreach_statement">foreach_statement</a>
+
+<i id = "grammer_do_statement">do_statement</i>
+    do <a href = "#grammer_statement">statement</a> while ( <a href = "#grammer_expression">expression</a> ) ;
+
+<i id = "grammer_while_statement">while_statement:</i>
+    while ( <a href = "#grammer_expression">expression</a> ) <a href = "#grammer_statement">statement</a>
+
+<i id = "grammer_for_statement">for_statement:</i>
+    for ( <a href = "#grammer_for_init"><i>for_init</i></a><sub>opt</sub> ; <a href = "#grammer_statement_expression_list"><i>statement_expression_list</i></a><sub>opt</sub> ; <a href = "#grammer_for_update"><i>for_update</i></a><sub>opt</sub> ) <a href = "#grammer_statement">statement</a>
+
+<i id = "grammer_for_init">for_init:</i>
+    <a href = "#grammer_statement_expression_list">statement_expression_list</a>
+    <a href = "#grammer_local_variable_declaration">local_variable_declaration</a>
+
+<i id = "grammer_statement_expression_list">statement_expression_list:</i>
+    <a href = "#grammer_statement_expression">statement_expression</a>
+    <a href = "#grammer_statement_expression">statement_expression</a> <i>statement_expression_list</i>
+
+<i id = "grammer_for_update">for_update:</i>
+    <a href = "#grammer_statement_expression_list">statement_expression_list</a>
+
+<i id = "grammer_foreach_statement">foreach_statement:</i>
+    foreach ( <a href = "#grammer_expression">expression</a> as <a href = "#grammer_foreach_key"><i>foreach_key</i></a><sub>opt</sub> <a href = "#grammer_foreach_value">foreach_value</a> ) <a href = "#grammer_statement">statement</a>
+
+<i id = "grammer_foreach_key">foreach_key:</i>
+    <a href = "#grammer_local_variable_type"><i>local_variable_type</i></a><sub>opt</sub> <a href = "#grammer_identifier">identifier</a> =>
+
+<i id = "grammer_foreach_value">foreach_value:</i>
+    <a href = "#grammer_local_variable_type"><i>local_variable_type</i></a><sub>opt</sub> <a href = "#grammer_identifier">identifier</a>
+</pre>
+
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">跳转语句块语法：</div>
+    
+<pre>
+<i id = "grammer_jump_statement">jump_statement:</i>
+    <a href = "#grammer_goto_statement">goto_statement</a>
+    <a href = "#grammer_break_statement">break_statement</a>
+    <a href = "#grammer_continue_statement">continue_statement</a>
+    <a href = "#grammer_return_statement">return_statement</a>
+    <a href = "#grammer_throw_statement">throw_statement</a>
+</pre>
+
+</div>
 
 ### 表达式相关语法
