@@ -1088,6 +1088,25 @@ title: polarphp 支持语言的语法结构汇总
 
 <i id = "grammer_empty_statement">empty_statement:</i>
     ;
+
+<i id = "grammer_synchronized_statement">synchronized_statement:</i>
+    synchronized ( <a href = "#grammer_expression">expression</a> ) <a href = "#grammer_block">block</a>
+
+<i id = "grammer_assert_statement">assert_statement:</i>
+    assert ( <a href = "#grammer_expression">expression</a> )
+    assert ( <a href = "#grammer_expression">expression</a> , <a href = "#grammer_expression">expression</a> )
+
+<i id = "grammer_expression_statement">expression_statement</i>
+    <a href = "#grammer_statement_expression">statement_expression</a> ;
+
+<i id = "grammer_statement_expression">statement_expression:</i>
+    <a href = "#grammer_assignment_expression">assignment_expression</a>
+    <a href = "#grammer_pre_increment_expression">pre_increment_expression</a>
+    <a href = "#grammer_pre_decrement_expression">pre_decrement_expression</a>
+    <a href = "#grammer_post_increment_expression">post_increment_expression</a>
+    <a href = "#grammer_post_decrement_expression">post_decrement_expression</a>
+    <a href = "#grammer_method_invocation">method_invocation</a>
+    <a href = "#grammer_class_instance_creation_expression">class_instance_creation_expression</a>
 </pre>
 
 </div>
@@ -1189,6 +1208,53 @@ title: polarphp 支持语言的语法结构汇总
     <a href = "#grammer_continue_statement">continue_statement</a>
     <a href = "#grammer_return_statement">return_statement</a>
     <a href = "#grammer_throw_statement">throw_statement</a>
+
+<i id = "grammer_goto_statement">goto_statement:</i>
+    goto <a href = "#grammer_identifier">identifier</a> ;
+
+<i id = "grammer_break_statement">continue_statement:</i>
+    continue <a href = "#grammer_identifier"><i>breakout_level</i></a><sub>opt</sub> ;
+
+<i id = "grammer_continue_statement">break_statement:</i>
+    break <a href = "#grammer_identifier"><i>breakout_level</i></a><sub>opt</sub> ;
+
+<i id = "grammer_breakout_level">breakout_level:</i>
+    <a href = "#grammer_identifier">identifier</a>
+    <a href = "#grammer_integer_literal">integer_literal</a>
+
+<i id = "grammer_return_statement">return_statement:</i>
+    return <a href = "#grammer_expression"><i>expression</i></a><sub>opt</sub> ;
+
+<i id = "grammer_throw_statement">throw_statement:</i>
+    throw <a href = "#grammer_expression">expression</a> ;
+</pre>
+
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">异常捕获语法：</div>
+
+<pre>
+<i id = "grammer_try_statement">try_statement:</i>
+    try <a href = "#grammer_block">block</a> <a href = "#grammer_catche_clauses">catche_clauses</a>
+    try <a href = "#grammer_block">block</a> <a href = "#grammer_catche_clauses"><i>catche_clauses</i></a><sub>opt</sub> <a href = "#grammer_finally_clause">finally_clause</a>
+
+<i id = "grammer_catche_clauses">catche_clauses:</i>
+    <a href = "#grammer_catche_clause">catche_clause</a>
+    <a href = "#grammer_catche_clause">catche_clause</a> <i>catche_clauses</i>
+
+<i id = "grammer_catche_clause">catche_clause:</i>
+    catch ( <a href = "#grammer_catch_formal_parameter">catch_formal_parameter</a> ) <a href = "#grammer_block">block</a>
+
+<id id = "grammer_catch_formal_parameter">catch_formal_parameter:</i>
+    <a href = "#grammer_variable_modifier">variable_modifier</a> <a href = "#grammer_catch_types">catch_types</a> <a href = "#grammer_variable_declarator_id">variable_declarator_id</a>
+
+<id id = "grammer_catch_types">catch_types:</i>
+    <a href = "#grammer_type">type</a>
+    <a href = "#grammer_type">type</a> | <i>catch_types</i>
+
+<i id = "#grammer_finally_clause">finally_clause:</i>
+    finally <a href = "#grammer_block">block</a>
 </pre>
 
 </div>
