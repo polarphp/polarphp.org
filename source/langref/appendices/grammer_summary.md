@@ -1260,3 +1260,48 @@ title: polarphp 支持语言的语法结构汇总
 </div>
 
 ### 表达式相关语法
+
+<div class = "grammer-section">
+<div class = "grammer-title">表达式语法：</div>
+
+<pre>
+<i id = "grammer_expression">expression:</i>
+    <a href = "#grammer_yield_expression">yield_expression</a>
+    print ( <a href = "#grammer_expression">yield_expression</a> )
+
+<i id = "grammer_yield_expression">yield_expression:</i>
+    <a href = "#grammer_yield_from_expression">yield_from_expression</a>
+    yield
+    yield <i>yield_expression</i>
+    yield <a href = "#grammer_yield_from_expression">yield_from_expression</a> => <i>yield_expression</i>
+
+<i id = "grammer_yield_from_expression">yield_from_expression:</i>
+    <a href = "#grammer_assignment_expression">assignment_expression</a>
+    yield from <a href = "#grammer_assignment_expression">assignment_expression</a>
+
+<i id = "grammer_assignment_expression">assignment_expression:</i>
+    <a href = "#grammer_conditional_expression">conditional_expression</a>
+    <a href = "#grammer_assignment_expression">assignment_expression</a>
+
+<i id = "grammer_assignment">assignment_expression:</i>
+    <a href = "#grammer_variable">variable</a> <a href = "#grammer_assignment_operator">assignment_operator</a> <a href = "#grammer_expression">expression</a>
+
+<i id = "grammer_assignment_operator">assignment_operator:</i>
+    <i>(one of)</i>
+    =  *=  /=  %=  +=  -=  
+    <<=  >>=  >>>=  &=  ^=  |=
+    **=
+</pre>
+
+</div>
+
+<div class = "grammer-section">
+<div class = "grammer-title">条件选择表达式语法：</div>
+
+<pre>
+<i id = "grammer_conditional_expression">conditional_expression:</i>
+    <a href = "#grammer_coalesce_expression">coalesce_expression</a>
+    <a href = "#grammer_coalesce_expression">coalesce_expression</a> ? <a href = "#grammer_expression">expression</a><sub>opt</sub> : <i>conditional_expression</i>
+</pre>
+
+</div>
